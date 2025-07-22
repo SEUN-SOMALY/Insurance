@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <img src="../assets/LH-SBI-Insurance-Official-Logo.png" alt="Logo" class="logo" />
+      <img src="../assets/Logoo.png" alt="Logo" class="logo" />
     </div>
 
     <!-- Hamburger icon -->
@@ -12,7 +12,7 @@
     </div>
 
     <ul :class="['nav-list', { 'show': isMenuOpen }]">
-      <li><a href="/" class="text-decoration-none">ទំព័រដើម</a></li>
+      <li><router-link :to="{ path: '/', query: { type: 'home' } }"><a href="#" class="text-decoration-none">ទំព័រដើម</a></router-link></li>
       <!-- <li><router-link to="/about">អំពីយើង</router-link></li> -->
       <li class="dropdown">
         <a href="#">ផលិតផល <span class="dropdown-icon">▼</span></a>
@@ -22,7 +22,7 @@
         </ul>
       </li>
       <li><a href="#service-section" class="text-decoration-none">សេវាកម្ម</a></li>
-      <a href="#footer-section" class=" text-decoration-none">ទំនាក់ទំនង</a>
+      <li><a href="#footer-section" class=" text-decoration-none">ទំនាក់ទំនង</a></li>
     </ul>
 
     <div class="call-info">
@@ -53,16 +53,14 @@ const toggleMenu = () => {
   margin: 0;
   padding: 0;
 }
-a:hover {
-  color: #e41717 !important;
-}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  padding: 20px 50px;
-  font-family: 'Khmer OS';
+  height: 10vh;
+  border-bottom: 1px solid #ddd;
   position: relative;
   padding: 0 20px;
   z-index: 999;
