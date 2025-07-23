@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <img src="../assets/LH-SBI-Insurance-Official-Logo.png" alt="Logo" class="logo" />
+      <img src="../assets//Logo.png" alt="Logo" class="logo" />
     </div>
 
     <ul class="nav-list">
@@ -50,7 +50,8 @@ export default {
 }
 
 .logo {
-  height: 50px;
+width: 300px;
+  height: auto;
 }
 
 .nav-list {

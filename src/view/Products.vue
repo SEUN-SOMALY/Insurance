@@ -9,13 +9,17 @@
       </div>
   
       <div v-if="selectedProduct === 'auto'" class="product-details">
-        <h2>🚗 Auto Insurance</h2>
-        <p>Drive with peace of mind knowing your vehicle is protected with our auto insurance.</p>
+        <HeroAuto/>
+        <InsuranceType/>
+        <InsuranceDetail/>
       </div>
     </div>
   </template>
   
   <script>
+import HeroAuto from '../components/Auto/HeroAuto.vue';
+import InsuranceDetail from '../components/Auto/InsuranceDetail.vue';
+import InsuranceType from '../components/Auto/InsuranceType.vue';
 import Benifit from '../components/HeroFire/Benifit.vue';
 import FactorOfFire from '../components/HeroFire/FactorOfFire.vue';
 import Hero from '../components/HeroFire/HeroFire.vue'
@@ -29,6 +33,9 @@ export default {
     Benifit,
     Testimonial,
     FactorOfFire,
+    HeroAuto,
+    InsuranceType,
+    InsuranceDetail,
   },
   data() {
     return {
@@ -46,15 +53,5 @@ export default {
 </script>
 
   
-  <style scoped>
-  .dropdown {
-    margin: 10px 0;
-    padding: 8px;
-    font-size: 16px;
-  }
-  .product-details {
-    background: #f9f9f9;
-    border-radius: 8px;
-  }
-  </style>
+  
   
