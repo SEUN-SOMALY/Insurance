@@ -1,30 +1,36 @@
 <template>
-    <div class="products-page">
-      <!-- Show content based on selection -->
-      <div v-if="selectedProduct === 'fire'" class="product-details">
-        <Hero/>
-        <FactorOfFire/>
-        <InsurancePackage/>
-        <Benifit/>
-      </div>
-  
-      <div v-if="selectedProduct === 'auto'" class="product-details">
-        <HeroAuto/>
-        <InsuranceType/>
-        <InsuranceDetail/>
-      </div>
+  <div class="products-page">
+    <!-- Show content based on selection -->
+    <div v-if="selectedProduct === 'fire'" class="product-details">
+      <Hero />
+      <FactorOfFire />
+      <InsurancePackage />
+      <Benifit />
     </div>
-  </template>
-  
-  <script>
-import HeroAuto from '../components/Auto/HeroAuto.vue';
-import InsuranceDetail from '../components/Auto/InsuranceDetail.vue';
-import InsuranceType from '../components/Auto/InsuranceType.vue';
+
+    <div v-if="selectedProduct === 'auto'" class="product-details">
+      <HeroAuto />
+      <TypeInsu />
+      <BestInsu />
+      <AddInsu/>
+      <AddDetail/>
+      
+    </div>
+  </div>
+</template>
+
+<script>
 import Benifit from '../components/HeroFire/Benifit.vue';
 import FactorOfFire from '../components/HeroFire/FactorOfFire.vue';
-import Hero from '../components/HeroFire/HeroFire.vue'
+import Hero from '../components/HeroFire/HeroFire.vue';
 import InsurancePackage from '../components/HeroFire/InsurancePackage.vue';
 import Testimonial from '../components/HeroFire/Testimonial.vue';
+import HeroAuto from '../components/AutoPage/HeroAuto.vue';
+import BestInsu from '../components/AutoPage/BestInsu.vue';
+import TypeInsu from '../components/AutoPage/TypeInsu.vue';
+import AddInsu from '../components/AutoPage/AddInsu.vue';
+import AddDetail from '../components/AutoPage/AddDetail.vue';
+
 export default {
   name: 'Products',
   components: {
@@ -34,8 +40,12 @@ export default {
     Testimonial,
     FactorOfFire,
     HeroAuto,
-    InsuranceType,
-    InsuranceDetail,
+    TypeInsu,
+    BestInsu,
+    AddInsu,
+    AddDetail
+
+    
   },
   data() {
     return {
@@ -52,6 +62,14 @@ export default {
 };
 </script>
 
-  
-  
-  
+<style scoped>
+.dropdown {
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+.product-details {
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+</style>
